@@ -1,0 +1,13 @@
+#TeXlipse project settings
+#Wed Mar 11 16:14:24 PDT 2009
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=plateau.tex
+outputFile=plateau.pdf
+langSpell=en
+markDer=true
+srcDir=
