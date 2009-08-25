@@ -1,0 +1,286 @@
+%-----------------------------------------------------------------------------
+%
+%               Template for LaTeX Class/Style File
+%
+% Name:         sigplanconf-template.tex
+% Purpose:      A template for sigplanconf.cls, which is a LaTeX 2e class
+%               file for SIGPLAN conference proceedings.
+%
+% Author:       Paul C. Anagnostopoulos
+%               Windfall Software
+%               978 371-2316
+%               paul@windfall.com
+%
+% Created:      15 February 2005
+%
+%-----------------------------------------------------------------------------
+
+
+\documentclass[9pt]{sigplanconf}
+
+\usepackage{amsmath}
+
+\usepackage{ifthen}
+\usepackage{colortbl}
+\usepackage{tabularx}
+
+\begin{document}
+
+\authorpermission
+\conferenceinfo{OOPSLA 2009,} {October 25--29, 2009, Orlando, Florida, USA.}
+\CopyrightYear{2009}
+\copyrightdata{978-1-60558-768-4/09/10}
+
+%\titlebanner{banner above paper title}        % These are ignored unless
+%\preprintfooter{short description of paper}   % 'preprint' option specified.
+
+
+\title{Evaluation and Usability of Programming Languages and Tools (PLATEAU)}
+
+\authorinfo{Craig Anslow}
+           {School of Engineering and Computer Science\\Victoria University of Wellington\\New Zealand}
+           {craig@ecs.vuw.ac.nz}
+\authorinfo{Shane Markstrum}
+           {Department of Computer Science\\Bucknell University\\USA}
+           {smarkstr@acm.org}
+\authorinfo{Emerson Murphy-Hill}
+           {Department of Computer Science\\University of British Columbia\\Canada}
+           {emhill@cs.ubc.ca}
+\maketitle
+
+\begin{abstract}
+  Programming languages exist to enable programmers to develop
+  software effectively.  But how \emph{efficiently} programmers can
+  write software depends on the usability of the languages and tools
+  that they develop with.  The aim of this workshop is to discuss
+  methods, metrics and techniques for evaluating the usability of
+  languages and language tools.  The supposed benefits of such
+  languages and tools cover a large space, including making programs
+  easier to read, write, and maintain; allowing programmers to write
+  more flexible and powerful programs; and restricting programs to
+  make them more safe and secure. We plan to gather the intersection
+  of researchers in the programming language, programming tool, and
+  human-computer interaction communities to share their research and
+  discuss the future of evaluation and usability of programming
+  languages and tools. We are also interested in the input of other
+  members of the programming research community working on related
+  areas, such as refactoring, design patterns, program analysis,
+  program comprehension, software visualization, end-user programming,
+  and other programming language paradigms.
+\end{abstract}
+
+\category{D.3.0}{Programming Languages}{Standards}
+\category{H.1.2}{User/Machine Systems}{Human Factors}
+
+\terms
+Human Factors, Languages
+
+\keywords
+Evaluation, Programming Languages, Tools, Usability
+
+
+\section{Main Themes and Goals}
+
+At the Programming Languages Grand Challenges panel at POPL 2009, Greg
+Morrisett claimed that one of the great neglected areas in programming
+languages research is the bridge between programming languages and
+human-computer interaction: the evaluation of the usability of
+programming languages and tools. This is evident by the recent
+research programs of major languages conferences such as POPL, PLDI,
+OOPSLA, and ECOOP. The object-oriented conferences tend to have at
+least one or two papers in the areas of corpus analysis or evaluation
+methodologies, but the authors of the papers seem to avoid using the
+results of their studies to make conclusions about the languages or
+tools themselves. Software engineering and human-computer interaction
+conferences tend to have better support of language usability analysis
+(CHI 2009 has three tracks that showcase research in this direction),
+but have limited visibility to the programming languages community.
+
+This workshop aims to be a first step in filling that void by
+developing and stimulating discussion of usability and evaluation of
+programming languages and tools with respect to language design and
+related areas. We will consider: empirical studies of programming
+languages; methodologies and philosophies behind language and tool
+evaluation; software design metrics and their relations to the
+underlying language; user studies of language features and software
+engineering tools; visual techniques for understanding programming
+languages; critical comparisons of programming paradigms, such as
+object-oriented vs. functional; and tools to support evaluating
+programming languages. We have two goals:
+
+\begin{enumerate}
+  \item 
+Develop a research community that shares ideas and collaborates on 
+research related to the evaluation and usability of languages and tools.
+\item
+Encourage the languages and tools communities to think more critically
+about how usability affects language and tool design and
+adoption.
+\end{enumerate}
+
+
+\section{Organizers}
+
+The logistical organisation of this workshop will be done by the following organizers.
+
+\begin{itemize}
+\item \textbf{Craig Anslow} is a PhD student in the School of
+  Engineering and Computer Science, Victoria University of Wellington,
+  New Zealand. His PhD topic is \emph{Visual Software Analytics for
+    Software Design Quality} and is supervised by James Noble and
+  Stuart Marshall. Craig has experience in building applications to
+  support the evaluation of programming languages using information
+  visualization techniques.
+
+\item \textbf{Shane Markstrum} recently defended his PhD in the
+  Department of Computer Science, University of California, Los
+  Angeles, USA. His PhD dissertation is titled \emph{Enforcing and
+    Validating User-Extensible Type Systems} and was supervised by
+  Todd Millstein. Shane has extensive experience in building
+  domain-specific languages for type systems and building plugins for
+  Eclipse that focus on language-oriented features. Shane has now
+  joined the faculty of Bucknell University as an assistant professor
+  of Computer Science.
+
+\item \textbf{Emerson Murphy-Hill} recently defended his PhD in the
+  Department of Computer Science, Portland State University, USA. His
+  dissertation is titled \emph{Programmer Friendly Refactoring Tools}
+  and was supervised by Andrew P. Black. Emerson is currently a
+  postdoctoral fellow at the University of British Columbia in the
+  Software Practices Lab with Gail Murphy.  Emerson is currently
+  researching software tool adoption and high-performance software
+  developers.
+\end{itemize}
+
+\section{Program Committee}
+
+Along with the organizers, the following people will form the Program
+Committee (PC) for the workshop and will help promote the workshop in
+the programming languages and human-computer interaction communities.
+
+\begin{itemize}
+
+\item \textbf{Andrew P. Black} is a Professor of Computer Science,
+  Portland State University, USA. His research interests are in the
+  area of programming languages, operating systems, object-oriented
+  systems and distributed computing, and more specifically in the
+  region where they overlap (such as language design for distributed
+  object-oriented computing). Andrew has been on the PC of OOPSLA
+  ('08, '05) and Chair of ECOOP ('05) and PC member ('07, '06, '05,
+  '03).
+
+\item \textbf{Larry Constantine} is a Professor in the Department of
+  Mathematics and Engineering at the University of Madeira where he
+  teaches in the dual-degree program that he helped organize with
+  Carnegie-Mellon University in the United States. He heads the
+  Laboratory for Usage-centered Software Engineering, a research and
+  development group dedicated to making technology more useful and
+  usable. He is an award-winning designer and author, recipient of the
+  2009 Stevens Award for his contributions to design and design
+  methods, and a Fellow of the Association for Computing Machinery.
+
+\item \textbf{Jeff Foster} is an Assistant Professor in the Computer
+  Science Department and UMIACS at the University of Maryland, College
+  Park. The goal of his research is to develop practical tools and
+  techniques to improve software quality. His research interests are
+  programming languages, software engineering, advanced static type
+  systems, scalable constraint-based analysis, and building tools that
+  implement his ideas.
+
+\item \textbf{Bob Fuhrer} is a Research Staff Member at the IBM
+  T.J. Watson Research Center in Hawthorne, NY, USA. He currently
+  works in the Program Analysis and Transformation group on advanced
+  refactoring and static analysis. Robert leads the SAFARI project,
+  whose goal is to develop a meta-tooling platform for creating
+  full-featured language-specific IDEs for Eclipse, including editing,
+  navigation, analysis and refactoring. Robert is also a member of the
+  team creating the X10 programming language.
+
+\item \textbf{Donna Malayeri} is a PhD student in the Computer Science
+  Department, Carnegie Mellon University, USA. Her PhD topic is
+  \emph{Retroactive Abstraction, Extensibility and Inheritance in
+    Object-Oriented Languages} and is supervised by Jonathan
+  Aldrich. Donna's research interests include programming languages,
+  including usability, tools, and environments; static analysis; and
+  human-computer interaction.
+
+\item \textbf{Stuart Marshall} is an Assistant Professor in the School
+  of Engineering and Computer Science, Victoria University of
+  Wellington, New Zealand. His research interests are in the area of
+  mobile user interfaces, software reuse, and software visualization.
+
+\item \textbf{Todd Millstein} is an Assistant Professor in the
+  Department of Computer Science, University of California, Los
+  Angeles, USA. His research areas include advanced language
+  mechanisms and static type systems for object-oriented programming,
+  object-oriented extensibility idioms, and language and tool support
+  for sensor network applications. Todd has been on the PC of OOPSLA
+  ('06 and '09) and ECOOP ('08) and was co-chair of the PC of PLPV
+  ('09).
+
+\item \textbf{James Noble} is a Professor of Computer Science and
+  Software Engineering within the School of Engineering and Computer
+  Science, Victoria University of Wellington, New Zealand.  His
+  research areas include Software Design, Programming Languages,
+  Design Patterns; Human-Computer Interaction; Software Visualisation
+  and Visual Languages; and the philosophy of Computer Science and
+  Software Engineering. James has been on the PC of OOPSLA ('09, '06,
+  '05, '02, '01) and ECOOP ('09, '08, '07, '05, '01).
+
+\item \textbf{Ewan Tempero} is an Associate Professor in the
+  Department of Computer Science, University of Auckland, New
+  Zealand. The main goal of his research is to make programmers more
+  productive, that is, help the people who actually produce code to do
+  so faster, with less effort, fewer errors, and with more enjoyment
+  than currently. His research interests are in the area of
+  object-oriented programming languages, software reuse, tool support
+  for programmers, software visualization, and the software
+  development process.
+
+\end{itemize}
+
+\section{Anticipated Attendance}
+
+We anticipate the following number of attendees:
+
+\begin{itemize}
+\item Minimum: 10 
+\item Ideal: 25 
+\item Maximum: 40 
+\end{itemize}
+
+\section{Advertisement}
+
+We will advertise this workshop by inviting participants of workshops
+in the areas of language design, tools, and general usability
+directly; as well as by emailing related mailing lists, posting on
+blogs such as Lambda the Ultimate, and contacting specific people
+known to be working in this area directly. In addition we will
+maintain a website (http://ecs.victoria.ac.nz/Events/PLATEAU/) for
+presenting position papers and organizational information.
+
+\section{Participant Preparation}
+
+Workshop participants should submit a position paper prior to one
+month before the workshop. Position papers will be made available
+through the workshop website and participants are encouraged to have
+read the position papers before attending the workshop. Participants
+are also asked to prepare a presentation to support their position
+paper. We will accept papers (from 4 to 6 pages) that describe
+work-in-progress or recently completed work based on the themes and
+goals of the workshop or related topics, report on experiences gained,
+question accepted wisdom, raise challenging open problems, or propose
+speculative new approaches.
+
+\section{Activities and Format}
+
+This workshop will be run as a full-day workshop at Onward! 2009.  We
+will have an introduction and keynote session in the morning followed
+by the presentation of workshop papers.  The last session of the day
+will include some workshop papers followed by a panel on ``Bridging
+the Gap Between Programming Languages and Human-Computer
+Interaction''. If we have time we will prepare a poster for the
+OOPSLA Welcome Reception.  
+
+\end{document}
+
