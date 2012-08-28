@@ -1,0 +1,205 @@
+\documentclass[10pt]{sigplanconf}
+
+
+\usepackage{ifthen}
+\usepackage{colortbl}
+\usepackage{tabularx}
+\usepackage{flushend}
+\usepackage{url}
+
+\newboolean{hidecomments}
+\setboolean{hidecomments}{true}
+\ifthenelse{\boolean{hidecomments}}
+{\newcommand{\nb}[2]{}}
+{\newcommand{\nb}[2]{
+    \fbox{\bfseries\sffamily\scriptsize#1}
+    {\sf\small$\blacktriangleright$
+      {#2} $\blacktriangleleft$}}}
+\newcommand\apb[1]{\nb{APB}{#1}}
+\newcommand\emh[1]{\nb{EMH}{#1}}
+\newcommand\comment[1]{#1}
+
+
+\begin{document}
+
+\conferenceinfo{SPLASH'12,} {October 19--26, 2012, Tucson, Arizona, USA.}
+\CopyrightYear{2012}
+\copyrightdata{978-1-4503-1563-0/12/10}
+
+
+\title{Evaluation and Usability of Programming Languages and Tools (PLATEAU)}
+
+\authorinfo{Shane Markstrum}
+           {Google}
+           {smarkstr@google.com}      
+\authorinfo{Emerson Murphy-Hill}
+           {North Carolina State University}
+           {emerson@csc.ncsu.edu}
+\authorinfo{Caitlin Sadowski}
+           {University of California, Santa Cruz}
+           {supertri@cs.ucsc.edu}
+\date{}
+
+\maketitle
+\begin{abstract}
+
+  Programming languages exist to enable programmers to develop
+  software effectively.  But how \emph{efficiently} programmers can
+  write software depends on the usability of the languages and tools
+  that they develop with.  The aim of this workshop is to discuss
+  methods, metrics and techniques for evaluating the usability of
+  languages and language tools.  The supposed benefits of such
+  languages and tools cover a large space, including making programs
+  easier to read, write, and maintain; allowing programmers to write
+  more flexible and powerful programs; and restricting programs to
+  make them more safe and secure. This workshop gathers the intersection
+  of researchers in the programming language, programming tool, and
+  human-computer interaction communities to share their research and
+  discuss the future of evaluation and usability of programming
+  languages and tools. We are also interested in the input of other
+  members of the programming research community working on related
+  areas, such as refactoring, design patterns, program analysis,
+  program comprehension, software visualization, end-user programming,
+  and other programming language paradigms.
+
+\end{abstract}
+
+\category{D.3.0}{Programming Languages}{Standards}
+\category{H.1.2}{User/Machine Systems}{Human Factors}
+
+
+%\terms{Human Factors, Languages}
+
+%\keywords{Evaluation, Programming Languages, Tools, Usability} 
+
+\section{Main Themes and Goals}
+
+Following on from the three previous iterations of the PLATEAU workshop at OOPSLA/Onward! 
+and SPLASH, this workshop brings together practitioners and
+researchers interested discussing usability and evaluation of
+programming languages and tools with respect to language design and
+related areas. We will consider: empirical studies of programming
+languages; methodologies and philosophies behind language and tool
+evaluation; software design metrics and their relations to the
+underlying language; user studies of language features and software
+engineering tools; visual techniques for understanding programming
+languages; critical comparisons of programming paradigms, such as
+object-oriented vs. functional; and tools to support evaluating
+programming languages. We have two goals:
+
+\begin{enumerate}
+  \item 
+Develop and sustain a research community that shares ideas and collaborates on 
+research related to the evaluation and usability of languages and tools.
+\item
+Encourage the languages and tools communities to think more critically
+about how usability affects the  design and adoption of languages and tools.
+\end{enumerate}
+
+
+\section{Organizers}
+
+\begin{itemize}
+\item \textbf{Shane Markstrum} is currently a Software Engineer at Google in New York, USA. Prior to joining Google he was an Assistant Professor in the Computer Science
+  department at Bucknell University and a Visiting Scholar at Victoria University of Wellington, New Zealand. He received his Ph.D. from the University of
+  California, Los Angeles in 2009. His research interests include
+  domain-specific languages and tools for extensible type systems; and 
+  building tool support for non-traditional language constructs.
+  
+\item \textbf{Emerson Murphy-Hill} is currently an Assistant Professor at North Carolina State University, USA. Prior to joining the NCSU faculy he was a postdoctoral researcher at the University of British Columbia in the Software Practices Lab with Gail Murphy. 
+  He received is Ph.D. from Portland State University in 2009.
+  His research interests include human-computer interaction and software tools. 
+
+\item \textbf{Caitlin Sadowski} is currently a Software Engineer at Google in Mountain View, USA. She received her Ph.D., focused on dynamic analyses for detecting concurrency errors, from the Computer Science Department of UC Santa Cruz where she was advised by Jim Whitehead and Cormac Flanagan.  %; she also has a body of research focused on usability and parallel programming.
+ Her research interests include the evaluation and usability of programming languages and software, parallelism and concurrency, and computer science education. She was a recipient of a distinguished paper award at OOPSLA 2011 for her paper ``Two for the Price of One: A Model for Parallel and Incremental Computation.''
+ She was also a Co-Chair for the SPLASH/OOPSLA Transitioning to Multicore (TMC) workshop in 2011 and the ICSE User evaluation for Software Engineering Researchers (USER) workshop in 2012. 
+\end{itemize}
+
+\section{Program Committee}
+
+The following people form the Program Committee (PC) for the workshop: % and will promote the workshop in the programming languages and human-computer interaction communities.
+
+\begin{itemize}
+\item Yvonne Coady - University of Victoria, Canada
+\item Jonathan Edwards - MIT, USA
+\item Thomas Fritz - University of Zurich, Switzerland
+\item Philip Guo - Google, USA
+\item Stefan Hanenberg, University of Duisburg-Essen,\,\,\,\,\,\,\,\,\,\,\,\,\, Germany
+\item Ciera Jaspan, Cal Poly Pomona, USA
+\item Thomas LaToza - UC Irvine, USA
+\item Portia O'Callaghan - MathWorks, USA
+\item Chris Parnin, Georgia Institute of Technology, USA
+\item Philip Wadler, University of Edinburgh, UK
+\end{itemize}
+
+
+\section{Anticipated Attendance}
+
+We anticipate the following number of attendees:
+
+\begin{itemize}
+\item Minimum: 20 
+\item Ideal: 35
+\item Maximum: 60 
+\end{itemize}
+
+\section{Advertisement}
+
+We advertised this workshop by inviting participants of workshops
+in the areas of language design, tools, and general usability
+directly; as well as by emailing related mailing lists, posting on
+blogs contacting specific people known to be working in this area directly,
+and through our group mailing list. In addition we maintain a website for presenting organizational information~\cite{website}.
+
+\section{Participant Preparation}\label{preparation}
+
+Workshop participants submit a paper prior to one
+month before the workshop. Papers are made available
+through the workshop website and participants are encouraged to have
+read the papers before attending the workshop. Participants
+are also asked to prepare a short presentation to support their
+paper. 
+The length limit on papers is 10 pages. %To help improve the quality of submissions,  we will provide attendees with exemplary papers and presentations from previous conferences.
+
+
+We look for papers that describe work-in-progress or recently completed work based on the themes and goals of the workshop or related topics, report on experiences gained, question accepted wisdom, raise challenging open problems, or propose
+speculative new approaches.
+
+\section{Activities and Format}
+
+This workshop is run as a full-day workshop at SPLASH and Onward! 2012.  We
+ have an introduction and keynote session in the morning followed
+by the presentation and discussion of workshop papers followed by a breakout session at the end. Table~\ref{tab:schedule} outlines the rough schedule of the format of the workshop.
+
+\comment{
+\begin{table} [!htbp] % this puts tables exactly where you want them
+\arrayrulecolor[gray]{0.8} %line color
+\begin{tabularx}{\columnwidth}{l|X}
+\textbf{Time}   & \textbf{Activity} \\
+\hline
+0830--0900    & Introductions \vspace{1mm} \\
+0900--1000    & Key Note Presentation \vspace{1mm} \\
+1000--1030     & Morning Break~\vspace{1mm}\\
+1030--1200   & Presentation of workshop papers \vspace{1mm}\\
+1200--1330     & Lunch Break~\vspace{1mm}\\
+1330--1500   & Presentation of workshop papers \vspace{1mm}\\
+1500--1530    & Afternoon Break~\vspace{1mm}\\
+1530--1700    & Breakout session \vspace{1mm}\\
+1700--1715    & Participant Feedback and Organizers Report  \\
+\end{tabularx}
+\caption{Workshop Schedule}
+\label{tab:schedule}
+\end{table}
+}
+
+\section{Post-workshop Activities}
+
+We hope that our participant's papers, published in the ACM Digital Library, will inspire future researchers. We aim to continue hosting this workshop in subsequent years.
+
+\begin{thebibliography}{1}
+
+\bibitem{website}
+ \url{https://sites.google.com/site/workshopplateau/}
+\end{thebibliography}
+
+\end{document}
