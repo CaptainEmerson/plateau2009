@@ -1,0 +1,218 @@
+\documentclass{sigplanconf}
+
+\usepackage{ifthen}
+\usepackage{colortbl}
+\usepackage{tabularx}
+\usepackage{flushend}
+\usepackage{url}
+
+\newboolean{hidecomments}
+\setboolean{hidecomments}{true}
+\ifthenelse{\boolean{hidecomments}}
+{\newcommand{\nb}[2]{}}
+{\newcommand{\nb}[2]{
+    \fbox{\bfseries\sffamily\scriptsize#1}
+    {\sf\small$\blacktriangleright$
+      {#2} $\blacktriangleleft$}}}
+\newcommand\apb[1]{\nb{APB}{#1}}
+\newcommand\emh[1]{\nb{EMH}{#1}}
+
+
+\begin{document}
+
+\title{Evaluation and Usability of Programming Languages and Tools (PLATEAU)}
+
+\authorinfo{Thomas La Toza}
+           {University of California, Irvine, USA}
+           {tlatoza@uci.edu} 
+\authorinfo{Craig Anslow}
+           {University of Calgary, Canada}
+           {craig.anslow@ucalgary.ca}
+\authorinfo{Joshua Sunshine}
+           {Carnegie Mellon University, USA}
+           {josh.sunshine@cs.cmu.edu}
+\date{}
+
+\maketitle
+\begin{abstract}
+
+  Programming languages exist to enable programmers to develop
+  software effectively.  But how \emph{efficiently} programmers can
+  write software depends on the usability of the languages and tools
+  that they develop with.  The aim of this workshop is to discuss
+  methods, metrics and techniques for evaluating the usability of
+  languages and language tools.  The supposed benefits of such
+  languages and tools cover a large space, including making programs
+  easier to read, write, and maintain; allowing programmers to write
+  more flexible and powerful programs; and restricting programs to
+  make them more safe and secure. We plan to gather the intersection
+  of researchers in the programming language, programming tool, and
+  human-computer interaction communities to share their research and
+  discuss the future of evaluation and usability of programming
+  languages and tools. We are also interested in the input of other
+  members of the programming research community working on related
+  areas, such as refactoring, design patterns, program analysis,
+  program comprehension, software visualization, end-user programming,
+  and other programming language paradigms.
+
+\end{abstract}
+
+\category{D.3.0}{Programming Languages}{Standards}
+\category{H.1.2}{User/Machine Systems}{Human Factors}
+
+
+\terms{Human Factors, Languages}
+
+\keywords{Evaluation, Programming Languages, Tools, Usability} 
+
+\section{Main Themes and Goals}
+
+Following on from the four previous workshops at SPLASH, this workshop aims to bring together practitioners and
+researchers interested discussing usability and evaluation of
+programming languages and tools with respect to language design and
+related areas. We will consider: empirical studies of programming
+languages; methodologies and philosophies behind language and tool
+evaluation; software design metrics and their relations to the
+underlying language; user studies of language features and software
+engineering tools; visual techniques for understanding programming
+languages; critical comparisons of programming paradigms, such as
+object-oriented vs. functional; and tools to support evaluating
+programming languages. We have two goals:
+
+\begin{enumerate}
+  \item 
+Develop and sustain a research community that shares ideas and collaborates on 
+research related to the evaluation and usability of languages and tools.
+\item
+Encourage the languages and tools communities to think more critically
+about how usability affects the  design and adoption of languages and tools.
+\end{enumerate}
+
+
+\section{Organizers}
+
+\begin{itemize}
+  
+\item \textbf{Thomas LaToza} is currently a Postdoctoral Research Scholar at the University of California, Irvine, USA.  He received his PhD from Carnegie Mellon University in 2012 and was advised by Brad A. Myers and Jonathan Aldrich. His research interests are software engineering, with a focus on human aspects of software development. 
+
+ \item \textbf{Craig Anslow} is currently a Postdoctoral Research Scholar at the University of Calgary, Canada. He received his PhD from Victoria University of Wellington, New Zealand in 2013 and was advised by James Noble and Stuart Marshall. His research interests include the evaluation and usability of programming languages and tools, and applying information visualization to software engineering.
+  
+\item \textbf{Josh Sunshine} is currently a Systems Scientist in the Institute for Software Research at Carnegie Mellon University.  He received his PhD from  Carnegie Mellon University in 2013 and was advised by Jonathan Aldrich. His research interests are at the intersection of programming languages and software engineering. He is particularly interested in better understanding of the factors that influence the usability of reusable software components.
+  
+\end{itemize}
+
+\section{Program Committee}
+
+The following people have been invited to form the Program Committee (PC) for the workshop and will help promote the workshop in the programming languages and human-computer interaction communities.
+
+\begin{itemize}
+\item Andrew Black - Portland State University, USA
+\item Alan Blackwell - Cambridge University, UK
+\item Jeff Carver - University of Alabama, USA
+\item Yvonne Coady - University of Victoria, Canada
+\item Rob Deline - Microsoft, USA
+\item Jonathan Edwards - MIT, USA
+\item Sebastian Erdweg - TU Darmstadt, Germany
+\item Thomas Fritz - University of Zurich, Switzerland
+\item Ronald Garcia - University of British Columbia, Canada
+\item Philip Guo - University of Rochester, USA
+\item Stefan Hanenberg - University of Duisburg-Essen, Germany
+\item Ciera Jaspan - Google, USA
+\item Caitlin Kelleher - Washington University St Louis, USA
+\item Donna Malayeri - Microsoft, USA
+\item Gail Murphy - University of British Columbia, Canada
+\item Emerson Murphy-Hill - North Carolina State University, USA
+\item James Noble - Victoria University of Wellington, New Zealand
+\item Chris Parnin - Georgia Institute of Technology, USA
+\item Marian Petre - Open University, UK
+\item Martin Robillard  - McGill University, Canada
+\item Caitlin Sadowski - Google, USA
+\item Janet Siegmund - University of Passau, Germany
+\item Andreas Stefik - University of Nevada, USA
+\item Chris Scaffidi - Oregon State University, Corvallis, USA
+\item Eric Tanter - University of Chile
+\end{itemize}
+
+\section{Anticipated Attendance}
+
+We anticipate the following number of attendees:
+
+\begin{itemize}
+\item Minimum: 10 
+\item Ideal: 20
+\item Maximum: 30 
+\end{itemize}
+
+\section{Participant Preparation}\label{preparation}
+
+Workshop participants should submit a research or position paper prior to one
+month before the workshop. Papers will be made available
+through the workshop website and participants are encouraged to have
+read the papers before attending the workshop. Participants
+are also asked to prepare a short presentation to support their
+paper. To help improve the quality of submissions, 
+we will provide attendees with exemplary papers
+from previous conferences.
+
+
+
+We will look for papers that describe work-in-progress or recently completed work based on the themes and goals of the workshop or related topics, report on experiences gained, question accepted wisdom, raise challenging open problems, or propose speculative new approaches. For research papers we will accept papers up to 10 pages in length and position papers 2 pages in length. We plan to have the workshop proceedings published in the ACM Digital Library including research papers.
+
+%\vfill\eject
+
+\section{Activities and Format}
+
+This workshop will be run as a full-day workshop.  We
+will have an introduction and keynote session in the morning followed
+by the presentation of workshop papers in two separate sessions. A breakout session will be held in the late afternoon followed by the wrap up of the workshop with participant feedback and a report from the organizers. Table~\ref{tab:schedule} outlines the schedule of the format of the workshop.
+
+
+\begin{table} [!htbp] % this puts tables exactly where you want them
+\arrayrulecolor[gray]{0.8} %line color
+\begin{tabularx}{\columnwidth}{|l|X|}
+\hline
+\textbf{Time}   & \textbf{Activity} \\
+\hline
+0830--0900    & Introductions \vspace{1mm} \\
+0900--1000    & Keynote Presentation \vspace{1mm} \\
+1000--1030    & Morning Break~\vspace{1mm}\\
+1030--1200    & Presentation of workshop papers \vspace{1mm}\\
+1200--1330    & Lunch Break~\vspace{1mm}\\
+1330--1445   & Presentation of workshop papers \vspace{1mm}\\
+1445--1515    & Afternoon Break~\vspace{1mm}\\
+1515--1715    & Breakout session \vspace{1mm}\\
+1715--1730    & Participant Feedback and Organizers Report  \\
+\end{tabularx}
+\caption{Workshop Schedule}
+\label{tab:schedule}
+\end{table}
+
+
+\section{Advertisement}
+
+We will advertise this workshop by inviting participants of workshops
+in the areas of language design, tools, and general usability
+directly; as well as by emailing related mailing lists, posting on
+blogs contacting specific people known to be working in this area directly,
+and through our group mailing list. Previous workshops were hosted on external websites~\cite{website-sites,website-vuw}.
+
+\section{Workshop Requirements}
+
+We require the room to have easels, pens, and paper for our breakout sessions; 
+Internet access; power strips for attendees to plug their laptops into; and a computer projector and
+screen for attendees to show the presentations of their
+papers.
+
+
+\section{Post-workshop Activities}
+
+We will publish our participant's papers in the ACM Digital Library, as outlined earlier (\S \ref{preparation}). Participants of the workshop will be encouraged to subscribe to our mailing list to continue the workshop discussion. We aim to continue hosting this workshop in future years.
+
+\begin{thebibliography}{1}
+\bibitem{website-sites}
+ \url{https://sites.google.com/site/workshopplateau/}
+ \bibitem{website-vuw}
+\url{http://ecs.victoria.ac.nz/Events/PLATEAU/WebHome}
+\end{thebibliography}
+
+\end{document}
