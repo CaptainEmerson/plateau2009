@@ -1,9 +1,10 @@
 \documentclass{sigplanconf}
 
+\usepackage[T1]{fontenc}
 \usepackage{ifthen}
 \usepackage{colortbl}
 \usepackage{tabularx}
-\usepackage{flushend}
+%\usepackage{flushend}
 \usepackage{url}
 
 \newboolean{hidecomments}
@@ -144,20 +145,14 @@ We anticipate the following number of attendees:
 
 Authors should submit a paper for review approximately two months before the workshop. Papers will be reviewed and discussed by the PC quickly and authors will be notified before the SPLASH early registration deadline. Papers will be made available in advance of the workshop through the workshop website and all participants will be encouraged to read the the papers before attending the workshop. Authors will prepare a short presentation to support their paper. To help improve the quality of submissions, the call for papers will link to exemplary papers from previous conferences.
 
-We will solicit three kinds of papers: research papers,  position papers, and hypothesis papers. Research papers can  describe work-in-progress or recently completed work on the themes and goals of the workshop or related topics. Position papers can report on experience, question accepted wisdom, raise challenging open problems, or propose speculative new approaches. Hypothesis papers will identify and collect the unsubstantiated beliefs of the research community or software industry. The hypotheses can be collected from mailing lists, blog posts, paper introductions,  developer forums, or interviews. Authors will be encouraged to document the source or sources of each hypothesis and to discuss the impact of the hypotheses on research or practice. Research papers will be limited to 10 pages in length and both position and hypothesis papers will be limited to 2 pages in length. 
+We will solicit three kinds of papers: research papers,  position papers, and hypothesis papers. Research papers can  describe work-in-progress or recently completed work on the themes and goals of the workshop or related topics. Position papers can report on experience, question accepted wisdom, raise challenging open problems, or propose speculative new approaches. Hypothesis papers will identify and collect the unsubstantiated beliefs of the research community or software industry. The hypotheses can be collected from mailing lists, blog posts, paper introductions,  developer forums, or interviews. Authors will be encouraged to document the source or sources of each hypothesis and to discuss the impact of the hypotheses on research or practice. Research papers will be limited to 10 pages in length and both position and hypothesis papers will be limited to 2 pages in length. Papers will be published in the ACM Digital Library at the authors' discretion.
 
-We plan to have the workshop proceedings published in the ACM Digital Library.
+In addition, we will invite the authors of papers of topical papers focus area presented at major programming languages, software engineering, or human-computer interaction conferences to present posters or ``lightning presentations'' (less than 5 minute) at the workshop. This idea has been used successfully for many years at the Symposium on Usable Privacy and Security (SOUPS), which is a similarly interdisciplinary venue. The organizers are in the process of combing the 2013 and 2014 proceedings of CHI, CSE, FSE, OOPSLA, ICFP, POPL, PLDI, ECOOP, CSCW, VLHCC, and PPIG for topical papers. We are also considering presenting a PLATEAU award to one of these same papers.
 
-%\vfill\eject
+\section{Keynote}
 
 \section{Activities and Format}
-
-This workshop will be run as a full-day mini-conferene.  We
-will have an introduction and keynote session in the morning followed
-by the presentation of research papers in two separate sessions. A breakout session will be held in the late afternoon followed by the wrap up of the workshop with participant feedback and a report from the organizers. Table~\ref{tab:schedule} outlines the schedule of the workshop.
-
-
-\begin{table} [!htbp] % this puts tables exactly where you want them
+\begin{table} [!t] % this puts tables exactly where you want them
 \arrayrulecolor[gray]{0.8} %line color
 \begin{tabularx}{\columnwidth}{|l|X|}
 \hline
@@ -166,19 +161,29 @@ by the presentation of research papers in two separate sessions. A breakout sess
 0830--0900    & Introductions \vspace{1mm} \\
 0900--1000    & Keynote Presentation \vspace{1mm} \\
 1000--1030    & Morning Break~\vspace{1mm}\\
-1030--1200    & Presentation of workshop papers \vspace{1mm}\\
+1030--1200    & Presentation of position / research papers \vspace{1mm}\\
 1200--1330    & Lunch Break~\vspace{1mm}\\
-1330--1445   & Presentation of workshop papers \vspace{1mm}\\
+1330--1445    & Posters / lightning talks of research presented at other conferences\vspace{1mm}\\
 1445--1515    & Afternoon Break~\vspace{1mm}\\
-1515--1715    & Breakout session \vspace{1mm}\\
+1515--1715    & Hypotheses breakout session \vspace{1mm}\\
 1715--1730    & Participant Feedback and Organizers Report  \\
 \end{tabularx}
 \caption{Workshop Schedule}
 \label{tab:schedule}
 \end{table}
+This workshop will be run as a full-day mini-conferene.  After the introductory remarks, Josh Bloch, designer of much of the Java Standard Library and popular technology author, will deliver the keynote. Dr. Block's expertise in API design is very relevant to PLATEAU. Research and position papers will be presented in the second morning session. After lunch, related work first presented at other venues will be repeated as posters or lightning presentations. Finally, we will conduct breakout sessions in which we will collate, consolidate, and discuss the hypotheses presented in hypothesis papers. Finally, we will wrap up with participant feedback and reports from the organizers.. Table~\ref{tab:schedule} outlines the schedule of the workshop.
 
 
-\section{Advertisement}
+\section{Advertisement and Publicity}
+
+Last years edition of PLATEAU was canceled because insufficient papers were submitted to fill the program. There are five factors that are different this year, which we believe will prevent a repeat of the cancellation:
+\begin{enumerate}
+\item We have attracted a keynote speaker, Josh Bloch, with a wide following in both academia and industry. 
+\item We will publicize the CFP and the workshop more aggressively, especially by encouraging our PC to spur contributions. 
+\item We have de-emphasized research papers in the program and are therefore less reliant on them for success. 
+\item The invitations to authors of related work first presented at other venues should help reach new participants. 
+\item The organizing committee has turned over completely, injecting new energy into promotion.
+\end{enumerate}
 
 We will advertise this workshop by inviting participants of workshops
 in the areas of language design, tools, and general usability
